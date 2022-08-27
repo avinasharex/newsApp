@@ -3,11 +3,11 @@ import './App.css';
 import React, { Component } from 'react'
 import Navbar from './components/Navbar';
 import News from './components/News';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+// import {
+//   BrowserRouter,
+//   Routes,
+//   Route,
+// } from "react-router-dom";
 
 export default class App extends Component {
   pageSize = 15;
@@ -15,7 +15,8 @@ export default class App extends Component {
     return (
       <>
       <Navbar></Navbar>
-        <BrowserRouter>
+      <News pageSize={this.pageSize} country={'in'}  category={'general'}/>
+        {/* <BrowserRouter>
           <Routes>
             <Route exact path="/" key={'general'} element={<News pageSize={this.pageSize} country={'in'}  category={'general'}/>} />
             <Route exact path="business" key={'business'} element={<News pageSize={this.pageSize} country={'in'}  category={'business'}/>} />
@@ -25,7 +26,7 @@ export default class App extends Component {
             <Route exact path="entertainment" key={'entertainment'} element={<News pageSize={this.pageSize} country={'in'}  category={'entertainment'}/>} />
             <Route exact path="technology" key={'technology'} element={<News pageSize={this.pageSize} country={'in'}  category={'technology'}/>} />
           </Routes>
-        </BrowserRouter>
+        </BrowserRouter> */}
         </>
     )
   }
